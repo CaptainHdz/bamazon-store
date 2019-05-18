@@ -15,11 +15,21 @@ var connection = mysql.createConnection({
         console.log("connected as id:"+connection.threadId);
   });
 
-  inquirer
-  .prompt([
-    /* Pass your questions in here */
+
+connection.query("SELECT * FROM product_storage", function(err, res) {
+    console.log(res);
+}
+);
+
+
+
+//   inquirer
+//   .prompt([
+//     /* Pass your questions in here */
     
-  ])
-  .then(answers => {
-    // Use user feedback for... whatever!!
-  });
+//   ])
+//   .then(answers => {
+//     // Use user feedback for... whatever!!
+//   });
+
+
